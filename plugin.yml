@@ -1,0 +1,7 @@
+name: HeadHunter
+main: mc.pixar02.HeadHunter.HeadHunter
+version: 1.0.0
+author: pixar02
+description: <description>
+softdepend: [PlaceholderAPI, Vault, WorldGuard, Multiverse]
+

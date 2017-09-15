@@ -1,0 +1,26 @@
+HeadHunter
+
+Features:
+Done: /
+
+
+TODO:
+- gameMechanics
+- GameManager
+- WorldManager
+- Data storage (MySQL, YML, JSON, H2, sqlLite)
+- Scoreboard
+- Placeholders?
+- commands:
+  - HH setSpawn <arena>
+  - HH setLobby 
+  - HH join [arena]
+  - 
+  - bounty <player> <coins>
+- permissions:
+  - HeadHunter.player
+  - HeadHunter.admin
+  -
+  -
+  
+- Bungee Cord support?

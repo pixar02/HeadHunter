@@ -1,4 +1,4 @@
-package mc.pixar02.HeadHunter.Utils;
+package mc.pixar02.PlayerHunter.Utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;

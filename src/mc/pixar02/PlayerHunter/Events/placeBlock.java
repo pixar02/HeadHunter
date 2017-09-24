@@ -1,4 +1,4 @@
-package mc.pixar02.HeadHunter.Events;
+package mc.pixar02.PlayerHunter.Events;
 
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;

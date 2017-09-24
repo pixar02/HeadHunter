@@ -1,4 +1,4 @@
-package mc.pixar02.HeadHunter.Managers;
+package mc.pixar02.PlayerHunter.Managers;
 
 import java.util.UUID;
 

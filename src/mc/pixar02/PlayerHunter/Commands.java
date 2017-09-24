@@ -1,4 +1,4 @@
-package mc.pixar02.HeadHunter;
+package mc.pixar02.PlayerHunter;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

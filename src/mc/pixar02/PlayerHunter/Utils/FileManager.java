@@ -1,4 +1,4 @@
-package mc.pixar02.HeadHunter.Utils;
+package mc.pixar02.PlayerHunter.Utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,10 +11,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import mc.pixar02.HeadHunter.HeadHunter;
+import mc.pixar02.PlayerHunter.PlayerHunter;
 
 public class FileManager {
-	private HeadHunter plugin = HeadHunter.getPlugin(HeadHunter.class);
+	private PlayerHunter plugin = PlayerHunter.getPlugin(PlayerHunter.class);
 
 	private FileConfiguration messages;
 

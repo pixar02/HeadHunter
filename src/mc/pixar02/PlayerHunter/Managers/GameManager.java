@@ -1,12 +1,12 @@
-package mc.pixar02.HeadHunter.Managers;
+package mc.pixar02.PlayerHunter.Managers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 
-import mc.pixar02.HeadHunter.HeadHunter;
+import mc.pixar02.PlayerHunter.PlayerHunter;
 
 public class GameManager {
-	private HeadHunter plugin = HeadHunter.getPlugin(HeadHunter.class);
+	private PlayerHunter plugin = PlayerHunter.getPlugin(PlayerHunter.class);
 
 	private int lobbycountdown;
 	private int playersNeeded;

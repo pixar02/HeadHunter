@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import mc.pixar02.PlayerHunter.Managers.CommandManager;
 import mc.pixar02.PlayerHunter.Managers.PlayerManager;
 import mc.pixar02.PlayerHunter.Managers.WorldManager;
 import mc.pixar02.PlayerHunter.Utils.FileManager;
@@ -29,12 +30,10 @@ public class PlayerHunter extends JavaPlugin {
 		loadManagers();
 
 		// commands
-		getCommand("HeadHunter").setExecutor(new Commands());
+		getCommand("PlayerHunter").setExecutor(new CommandManager(this));
 
 		logger.info(pdfFile.getName() + " has been enabled (V." + pdfFile.getVersion() + ")");
 	}
-
-
 
 	public void loadManagers() {
 		WM = new WorldManager();

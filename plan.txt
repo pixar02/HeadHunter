@@ -1,4 +1,4 @@
-HeadHunter
+PlayerHunter
 
 Features:
 Done: /
@@ -12,14 +12,14 @@ TODO:
 - Scoreboard
 - Placeholders?
 - commands:
-  - HH setSpawn <arena>
-  - HH setLobby 
-  - HH join [arena]
+  - PH setSpawn <arena>
+  - PH setLobby 
+  - PH join [arena]
   - 
   - bounty <player> <coins>
 - permissions:
-  - HeadHunter.player
-  - HeadHunter.admin
+  - PlayerHunter.player
+  - PlayerHunter.admin
   -
   -
   

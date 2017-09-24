@@ -51,8 +51,4 @@ public class PlayerHunter extends JavaPlugin {
 	public void loadMetrics() {
 		Metrics metrics = new Metrics(this);
 	}
-
-	public void g() {
-
-	}
 }

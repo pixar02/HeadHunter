@@ -48,7 +48,6 @@ public class CommandManager implements CommandExecutor {
 		Player player = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("PlayerHunter")) {
 			if (args.length == 0) {
-				player.sendMessage(ChatColor.YELLOW + "/playerhunter <args>");
 				BaseCmd target = cmds.get(0);
 				try {
 					target.onCommand(player, args);
@@ -57,7 +56,7 @@ public class CommandManager implements CommandExecutor {
 					player.sendMessage(ChatColor.DARK_RED + "An error occured while executing the command!");
 					ex.printStackTrace();
 				}
-				
+
 			}
 			BaseCmd target = this.get(args[0]);
 			if (target == null) {

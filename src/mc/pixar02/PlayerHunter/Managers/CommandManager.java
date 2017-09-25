@@ -12,7 +12,13 @@ import org.bukkit.entity.Player;
 
 import mc.pixar02.PlayerHunter.PlayerHunter;
 import mc.pixar02.PlayerHunter.Commands.BaseCmd;
+import mc.pixar02.PlayerHunter.Commands.CreateCmd;
+import mc.pixar02.PlayerHunter.Commands.DeleteCmd;
+import mc.pixar02.PlayerHunter.Commands.HelpCmd;
+import mc.pixar02.PlayerHunter.Commands.JoinCmd;
 import mc.pixar02.PlayerHunter.Commands.ReloadCmd;
+import mc.pixar02.PlayerHunter.Commands.StartCmd;
+import mc.pixar02.PlayerHunter.Commands.StopCmd;
 
 public class CommandManager implements CommandExecutor {
 
@@ -22,7 +28,13 @@ public class CommandManager implements CommandExecutor {
 	public CommandManager(PlayerHunter pl) {
 		this.pl = pl;
 		// add new commands here:
+		cmds.add(new HelpCmd(this));
 		cmds.add(new ReloadCmd());
+		cmds.add(new CreateCmd());
+		cmds.add(new DeleteCmd());
+		cmds.add(new JoinCmd());
+		cmds.add(new StartCmd());
+		cmds.add(new StopCmd());
 	}
 
 	@Override
@@ -33,7 +45,8 @@ public class CommandManager implements CommandExecutor {
 		Player player = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("PlayerHunter")) {
 			if (args.length == 0) {
-
+				player.sendMessage(ChatColor.RED + "/playerhunter <args>");
+				return true;
 			}
 			BaseCmd target = this.get(args[0]);
 			if (target == null) {
@@ -75,5 +88,9 @@ public class CommandManager implements CommandExecutor {
 			}
 		}
 		return null;
+	}
+
+	public ArrayList<BaseCmd> getCmds() {
+		return cmds;
 	}
 }

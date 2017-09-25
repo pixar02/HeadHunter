@@ -3,6 +3,7 @@ package mc.pixar02.PlayerHunter.Commands;
 import org.bukkit.entity.Player;
 
 public abstract class BaseCmd {
+
 	public BaseCmd() {
 
 	}

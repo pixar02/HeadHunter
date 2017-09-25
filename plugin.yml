@@ -1,7 +1,46 @@
-name: HeadHunter
-main: mc.pixar02.HeadHunter.HeadHunter
+name: PlayerHunter
+main: mc.pixar02.PlayerHunter.PlayerHunter
 version: 1.0.0
 author: pixar02
 description: <description>
 softdepend: [PlaceholderAPI, Vault, WorldGuard, Multiverse]
 
+commands:
+  PlayerHunter:
+    aliases: [ph]
+    usage: /<command>
+
+permissions:
+  PlayerHunter.*:
+    description: Gives access to everything
+    children:
+      PlayerHunter.admin: true
+      PlayerHunter.player: true
+  PlayerHunter.admin:
+    description: gives all permissions an admin would need
+    default: op
+    children:
+      PlayerHunter.command.create: true
+      PlayerHunter.command.delete: true
+      PlayerHunter.command.start: true
+      PlayerHunter.command.stop: true
+  PlayerHunter.player:
+    description: gives all permissions to be able to play
+    default: true
+     children:
+       PlayerHunter.command.join: true
+  PlayerHunter.command.join:
+    description: allows you to join a map
+    default: false
+  PlayerHunter.command.stop:
+    description: allows you to stop a map
+    default: false  
+  PlayerHunter.command.start:
+    description: allows you to start a map
+    default: false  
+  PlayerHunter.command.create:
+    description: allows you to create a map
+    default: false  
+  PlayerHunter.command.delete:
+    description: allows you to delete a map
+    default: false  

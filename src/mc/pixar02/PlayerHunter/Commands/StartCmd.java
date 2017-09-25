@@ -22,7 +22,7 @@ public class StartCmd extends BaseCmd {
 
 	@Override
 	public String info() {
-		return "force starts a game";
+		return "Force start a game";
 	}
 
 	@Override

@@ -2,7 +2,11 @@ package mc.pixar02.PlayerHunter.Commands;
 
 import org.bukkit.entity.Player;
 
-public class ReloadCmd extends BaseCmd {
+public class LeaveCmd extends BaseCmd {
+	/*
+	 * /PH leave
+	 * 
+	 */
 
 	@Override
 	public void onCommand(Player player, String[] args) {
@@ -12,17 +16,16 @@ public class ReloadCmd extends BaseCmd {
 
 	@Override
 	public String name() {
-		return "reload";
+		return "leave";
 	}
 
 	@Override
 	public String info() {
-		return "Reloads the plugin";
+		return "Leave your current game";
 	}
 
 	@Override
 	public String[] aliases() {
 		return new String[0];
 	}
-
 }

@@ -2,7 +2,8 @@ package mc.pixar02.PlayerHunter.Commands;
 
 import org.bukkit.entity.Player;
 
-public class StopCmd extends BaseCmd{
+public class StopCmd extends BaseCmd {
+
 	/*
 	 * /PlayerHunter stop [game]
 	 * 
@@ -21,7 +22,7 @@ public class StopCmd extends BaseCmd{
 
 	@Override
 	public String info() {
-		return "stops the given map or current";
+		return "Stops the given map or current";
 	}
 
 	@Override

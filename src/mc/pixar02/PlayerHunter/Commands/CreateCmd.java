@@ -22,7 +22,7 @@ public class CreateCmd extends BaseCmd {
 
 	@Override
 	public String info() {
-		return "creates a map";
+		return "Creates a map";
 	}
 
 	@Override

@@ -16,6 +16,7 @@ import mc.pixar02.PlayerHunter.Commands.CreateCmd;
 import mc.pixar02.PlayerHunter.Commands.DeleteCmd;
 import mc.pixar02.PlayerHunter.Commands.HelpCmd;
 import mc.pixar02.PlayerHunter.Commands.JoinCmd;
+import mc.pixar02.PlayerHunter.Commands.LeaveCmd;
 import mc.pixar02.PlayerHunter.Commands.ReloadCmd;
 import mc.pixar02.PlayerHunter.Commands.StartCmd;
 import mc.pixar02.PlayerHunter.Commands.StopCmd;
@@ -33,8 +34,10 @@ public class CommandManager implements CommandExecutor {
 		cmds.add(new CreateCmd());
 		cmds.add(new DeleteCmd());
 		cmds.add(new JoinCmd());
+		cmds.add(new LeaveCmd());
 		cmds.add(new StartCmd());
 		cmds.add(new StopCmd());
+
 	}
 
 	@Override
@@ -45,8 +48,16 @@ public class CommandManager implements CommandExecutor {
 		Player player = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("PlayerHunter")) {
 			if (args.length == 0) {
-				player.sendMessage(ChatColor.RED + "/playerhunter <args>");
-				return true;
+				player.sendMessage(ChatColor.YELLOW + "/playerhunter <args>");
+				BaseCmd target = cmds.get(0);
+				try {
+					target.onCommand(player, args);
+					return true;
+				} catch (Exception ex) {
+					player.sendMessage(ChatColor.DARK_RED + "An error occured while executing the command!");
+					ex.printStackTrace();
+				}
+				
 			}
 			BaseCmd target = this.get(args[0]);
 			if (target == null) {

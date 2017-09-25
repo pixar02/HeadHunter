@@ -7,8 +7,9 @@ softdepend: [PlaceholderAPI, Vault, WorldGuard, Multiverse]
 
 commands:
   PlayerHunter:
-    aliases: [ph]
-    usage: /<command>
+    description: this is the main plugin command.
+    aliases: [ph, PH, Playerh, pHunter]
+    usage: /<command> [args]
 
 permissions:
   PlayerHunter.*:
@@ -27,10 +28,14 @@ permissions:
   PlayerHunter.player:
     description: gives all permissions to be able to play
     default: true
-     children:
+    children:
        PlayerHunter.command.join: true
+       PlayerHunter.command.leave: true
   PlayerHunter.command.join:
     description: allows you to join a map
+    default: false
+  PlayerHunter.command.lave:
+    description: allows you to leave a map
     default: false
   PlayerHunter.command.stop:
     description: allows you to stop a map

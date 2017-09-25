@@ -19,7 +19,8 @@ public class HelpCmd extends BaseCmd {
 
 	@Override
 	public void onCommand(Player player, String[] args) {
-		player.sendMessage("test");
+		player.sendMessage(
+				ChatColor.GOLD + "--------[" + ChatColor.BLUE + "PlayerHunter" + ChatColor.GOLD + "]--------");
 		for (BaseCmd cmd : CM.getCmds()) {
 			player.sendMessage(ChatColor.GOLD + "- /PH " + cmd.name() + ": " + ChatColor.AQUA + cmd.info());
 		}
@@ -33,7 +34,7 @@ public class HelpCmd extends BaseCmd {
 
 	@Override
 	public String info() {
-		return "shows a help page with all the commands";
+		return "Shows this help page";
 	}
 
 	@Override

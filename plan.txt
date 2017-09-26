@@ -8,6 +8,7 @@ TODO:
 - gameMechanics
 - GameManager
 - WorldManager
+- PlayerManager (PlayerStats)
 - Data storage (MySQL, YML, JSON, H2, sqlLite)
 - Scoreboard
 - Placeholders?

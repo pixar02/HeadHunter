@@ -21,12 +21,12 @@ import mc.pixar02.PlayerHunter.Commands.ReloadCmd;
 import mc.pixar02.PlayerHunter.Commands.StartCmd;
 import mc.pixar02.PlayerHunter.Commands.StopCmd;
 
-public class CommandManager implements CommandExecutor {
+public class CmdManager implements CommandExecutor {
 
 	private ArrayList<BaseCmd> cmds = new ArrayList<BaseCmd>();
 	private PlayerHunter pl;
 
-	public CommandManager(PlayerHunter pl) {
+	public CmdManager(PlayerHunter pl) {
 		this.pl = pl;
 		// add new commands here:
 		cmds.add(new HelpCmd(this));

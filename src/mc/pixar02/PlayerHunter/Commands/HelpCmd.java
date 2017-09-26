@@ -3,12 +3,12 @@ package mc.pixar02.PlayerHunter.Commands;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-import mc.pixar02.PlayerHunter.Managers.CommandManager;
+import mc.pixar02.PlayerHunter.Managers.CmdManager;
 
 public class HelpCmd extends BaseCmd {
-	private CommandManager CM;
+	private CmdManager CM;
 
-	public HelpCmd(CommandManager CM) {
+	public HelpCmd(CmdManager CM) {
 		this.CM = CM;
 	}
 

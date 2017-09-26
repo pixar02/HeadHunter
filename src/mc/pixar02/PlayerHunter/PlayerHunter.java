@@ -9,7 +9,8 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import mc.pixar02.PlayerHunter.API.PlaceHolders;
-import mc.pixar02.PlayerHunter.Managers.CommandManager;
+import mc.pixar02.PlayerHunter.Events.onJoin;
+import mc.pixar02.PlayerHunter.Managers.CmdManager;
 import mc.pixar02.PlayerHunter.Managers.GameManager;
 import mc.pixar02.PlayerHunter.Managers.PlayerManager;
 import mc.pixar02.PlayerHunter.Managers.WorldManager;
@@ -18,7 +19,7 @@ import mc.pixar02.PlayerHunter.Utils.Metrics;
 
 public class PlayerHunter extends JavaPlugin {
 
-	public HashMap<UUID, PlayerManager> playerManager = new HashMap<>();
+	public HashMap<UUID, PlayerManager> playerManager = new HashMap<UUID, PlayerManager>();
 	public boolean debug = false;
 	private FileManager FM;
 	private WorldManager WM;
@@ -33,10 +34,14 @@ public class PlayerHunter extends JavaPlugin {
 		// register Managers
 		loadManagers();
 
+		// register events
+		getServer().getPluginManager().registerEvents(new onJoin(this), this);
+		
 		// commands
-		getCommand("PlayerHunter").setExecutor(new CommandManager(this));
+		getCommand("PlayerHunter").setExecutor(new CmdManager(this));
 
 		logger.info(pdfFile.getName() + " has been enabled (V." + pdfFile.getVersion() + ")");
+
 		if (Bukkit.getPluginManager().isPluginEnabled("PlaceHolderAPI")) {
 			new PlaceHolders(this).hook();
 		}
@@ -47,7 +52,6 @@ public class PlayerHunter extends JavaPlugin {
 		FM = new FileManager();
 		GM = new GameManager();
 		FM.setup();
-		WM.setup();
 	}
 
 	public void onDisable() {

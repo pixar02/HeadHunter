@@ -30,6 +30,7 @@ public class CommandManager implements CommandExecutor {
 		this.pl = pl;
 		// add new commands here:
 		cmds.add(new HelpCmd(this));
+		// from here not above!!!!!
 		cmds.add(new ReloadCmd());
 		cmds.add(new CreateCmd());
 		cmds.add(new DeleteCmd());

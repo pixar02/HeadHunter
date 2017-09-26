@@ -4,10 +4,13 @@ import java.util.HashMap;
 import java.util.UUID;
 import java.util.logging.Logger;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import mc.pixar02.PlayerHunter.API.PlaceHolders;
 import mc.pixar02.PlayerHunter.Managers.CommandManager;
+import mc.pixar02.PlayerHunter.Managers.GameManager;
 import mc.pixar02.PlayerHunter.Managers.PlayerManager;
 import mc.pixar02.PlayerHunter.Managers.WorldManager;
 import mc.pixar02.PlayerHunter.Utils.FileManager;
@@ -19,6 +22,7 @@ public class PlayerHunter extends JavaPlugin {
 	public boolean debug = false;
 	private FileManager FM;
 	private WorldManager WM;
+	private GameManager GM;
 
 	PluginDescriptionFile pdfFile = getDescription();
 	Logger logger = getLogger();
@@ -33,11 +37,15 @@ public class PlayerHunter extends JavaPlugin {
 		getCommand("PlayerHunter").setExecutor(new CommandManager(this));
 
 		logger.info(pdfFile.getName() + " has been enabled (V." + pdfFile.getVersion() + ")");
+		if (Bukkit.getPluginManager().isPluginEnabled("PlaceHolderAPI")) {
+			new PlaceHolders(this).hook();
+		}
 	}
 
 	public void loadManagers() {
 		WM = new WorldManager();
 		FM = new FileManager();
+		GM = new GameManager();
 		FM.setup();
 		WM.setup();
 	}
@@ -49,5 +57,13 @@ public class PlayerHunter extends JavaPlugin {
 	@SuppressWarnings("unused")
 	public void loadMetrics() {
 		Metrics metrics = new Metrics(this);
+	}
+
+	public WorldManager getWM() {
+		return this.WM;
+	}
+
+	public GameManager getGM() {
+		return this.GM;
 	}
 }

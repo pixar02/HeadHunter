@@ -1,3 +1,4 @@
 external-economy: false
-
+Settings:
+  teleport-onjoin: true
 lobby:

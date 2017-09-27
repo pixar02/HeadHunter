@@ -36,7 +36,7 @@ public class PlayerHunter extends JavaPlugin {
 
 		// register events
 		getServer().getPluginManager().registerEvents(new onJoin(this), this);
-		
+
 		// commands
 		getCommand("PlayerHunter").setExecutor(new CmdManager(this));
 
@@ -69,5 +69,9 @@ public class PlayerHunter extends JavaPlugin {
 
 	public GameManager getGM() {
 		return this.GM;
+	}
+
+	public FileManager getFM() {
+		return this.FM;
 	}
 }

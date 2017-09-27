@@ -3,12 +3,13 @@ package mc.pixar02.PlayerHunter.Commands;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-import mc.pixar02.PlayerHunter.Utils.FileManager;
+import mc.pixar02.PlayerHunter.PlayerHunter;
 
 public class CreateCmd extends BaseCmd {
-	private FileManager FM;
+	private PlayerHunter plugin;
 
-	public CreateCmd() {
+	public CreateCmd(PlayerHunter plugin) {
+		this.plugin = plugin;
 	}
 
 	/*
@@ -19,10 +20,12 @@ public class CreateCmd extends BaseCmd {
 	@Override
 	public void onCommand(Player player, String[] args) {
 		// TODO Auto-generated method stub
-		if (FM.getFile("config").getString("lobby.world") == null | FM.getFile("config").getDouble("lobby.x") == 0
-				| FM.getFile("config").getDouble("lobby.y") == 0 | FM.getFile("config").getDouble("lobby.z") == 0) {
-			player.sendMessage(
-					ChatColor.translateAlternateColorCodes('&', FM.getFile("messages").getString("error.no-lobby")));
+		if (plugin.getFM().getFile("config").getString("lobby.world") == null
+				| plugin.getFM().getFile("config").getDouble("lobby.x") == 0
+				| plugin.getFM().getFile("config").getDouble("lobby.y") == 0
+				| plugin.getFM().getFile("config").getDouble("lobby.z") == 0) {
+			player.sendMessage(ChatColor.translateAlternateColorCodes('&',
+					plugin.getFM().getFile("messages").getString("error.no-lobby")));
 		} else {
 
 		}

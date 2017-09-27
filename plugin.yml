@@ -9,7 +9,7 @@ commands:
   PlayerHunter:
     description: this is the main plugin command.
     aliases: [ph, PH, Playerh, pHunter]
-    usage: /<command> [args]
+    usage: /<command> [args] 
 
 permissions:
   PlayerHunter.*:

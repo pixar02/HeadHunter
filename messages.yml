@@ -1,0 +1,2 @@
+error:
+  no-lobby: 'Please set a lobby point before creating a game!'

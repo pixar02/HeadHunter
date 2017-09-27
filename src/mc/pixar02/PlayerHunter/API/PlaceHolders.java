@@ -3,6 +3,7 @@ package mc.pixar02.PlayerHunter.API;
 import org.bukkit.entity.Player;
 
 import mc.pixar02.PlayerHunter.PlayerHunter;
+import mc.pixar02.PlayerHunter.Managers.PlayerManager;
 import me.clip.placeholderapi.external.EZPlaceholderHook;
 
 public class PlaceHolders extends EZPlaceholderHook {
@@ -15,16 +16,18 @@ public class PlaceHolders extends EZPlaceholderHook {
 
 	@Override
 	public String onPlaceholderRequest(Player pl, String identifier) {
+
 		if (pl == null) {
 			return "";
 		}
+		PlayerManager PM = plugin.playerManager.get(pl.getUniqueId());
 		// %playerhunter_player_wins%
 		if (identifier.equalsIgnoreCase("player_wins")) {
 			return "";
 		}
 		// %playerhunter_player_balance%
 		if (identifier.equalsIgnoreCase("player_balance")) {
-			return "";
+			return String.valueOf(PM.getBalance());
 		}
 		// %playerhunter_player_deaths%
 		if (identifier.equalsIgnoreCase("player_deaths")) {

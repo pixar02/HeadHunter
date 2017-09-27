@@ -5,7 +5,7 @@ Done: /
 
 
 TODO:
-- gameMechanics
+- GameMechanics
 - GameManager
 - WorldManager
 - PlayerManager (PlayerStats)

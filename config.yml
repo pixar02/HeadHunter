@@ -1,4 +1,10 @@
-external-economy: false
 Settings:
-  teleport-onjoin: true
+  onjoin:
+    teleport: true
+    clearInventory: false
+    clearXP: false
+    clearPotionEffects: false
+  external-economy: false
+
+  
 lobby:

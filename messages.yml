@@ -1,2 +1,5 @@
 error:
-  no-lobby: 'Please set a lobby point before creating a game!'
+  no-lobby: '&4Please set a lobby point before creating a game!'
+  no-perm: '&4You do not have permission to do this !'
+  map-create-exists: '&4That map already exists!'
+  

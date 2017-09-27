@@ -14,10 +14,12 @@ import mc.pixar02.PlayerHunter.PlayerHunter;
 import mc.pixar02.PlayerHunter.Commands.BaseCmd;
 import mc.pixar02.PlayerHunter.Commands.CreateCmd;
 import mc.pixar02.PlayerHunter.Commands.DeleteCmd;
+import mc.pixar02.PlayerHunter.Commands.EditCmd;
 import mc.pixar02.PlayerHunter.Commands.HelpCmd;
 import mc.pixar02.PlayerHunter.Commands.JoinCmd;
 import mc.pixar02.PlayerHunter.Commands.LeaveCmd;
 import mc.pixar02.PlayerHunter.Commands.ReloadCmd;
+import mc.pixar02.PlayerHunter.Commands.SaveCmd;
 import mc.pixar02.PlayerHunter.Commands.SetlobbyCmd;
 import mc.pixar02.PlayerHunter.Commands.StartCmd;
 import mc.pixar02.PlayerHunter.Commands.StopCmd;
@@ -35,6 +37,8 @@ public class CmdManager implements CommandExecutor {
 		cmds.add(new ReloadCmd());
 		cmds.add(new CreateCmd(pl));
 		cmds.add(new DeleteCmd());
+		cmds.add(new EditCmd());
+		cmds.add(new SaveCmd());
 		cmds.add(new JoinCmd());
 		cmds.add(new LeaveCmd());
 		cmds.add(new StartCmd());
@@ -103,6 +107,11 @@ public class CmdManager implements CommandExecutor {
 		return null;
 	}
 
+	/**
+	 * gets the commands list
+	 * 
+	 * @return
+	 */
 	public ArrayList<BaseCmd> getCmds() {
 		return cmds;
 	}

@@ -50,7 +50,7 @@ public class PlayerHunter extends JavaPlugin {
 	public void loadManagers() {
 		WM = new WorldManager();
 		FM = new FileManager();
-		GM = new GameManager();
+		GM = new GameManager(this);
 		FM.setup();
 	}
 

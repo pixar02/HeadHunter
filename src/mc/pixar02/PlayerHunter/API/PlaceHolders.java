@@ -27,7 +27,7 @@ public class PlaceHolders extends EZPlaceholderHook {
 		}
 		// %playerhunter_player_balance%
 		if (identifier.equalsIgnoreCase("player_balance")) {
-			return String.valueOf(PM.getBalance());
+			return "";
 		}
 		// %playerhunter_player_deaths%
 		if (identifier.equalsIgnoreCase("player_deaths")) {

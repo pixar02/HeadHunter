@@ -35,8 +35,5 @@ public class onJoin implements Listener {
 			}
 		}
 
-		UUID uuid = player.getUniqueId();
-
-		plugin.playerManager.put(uuid, new PlayerManager(uuid, false, false, 0));
 	}
 }

@@ -1,0 +1,31 @@
+#The name of the kit
+kit-name: example
+
+# The materials the kit should have in the kit menu
+icon: diamond_sword
+
+# the cost to use the kit
+cost: 15000
+
+# The items in this kit.
+#First the item there material name. Second the ammount that will be given.
+# Third, forth,... the enchantments. You can add multiple echantments by putting a space between each one.
+# This also count for the Armor! 
+items:
+- diamond_sword 1 sharpness:5
+- bow 1 infinity:1 power:2
+
+armor:
+  helmet: diamond_helmet 1 protection:4
+  chetplate: diamond_chestplate 1 protection:4
+  leggins: diamond_leggings 1 protection:4
+  boots: diamond_boots 1 protection:4
+
+#The potion effect that are given with the kit.
+#First the name of the potion effect. Second is the time(in seconds) the potion effect it's effect last (-1 for infinite).
+#Third is the potions stregth level.
+potion effects:
+- strength -1 2
+- speed 30 1
+
+

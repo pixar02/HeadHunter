@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 
 public class GameKit {
+	private ItemStack icon;
 	private String name;
 	private String kitName;
 	private int cost;
@@ -42,5 +43,8 @@ public class GameKit {
 
 	public Collection<PotionEffect> getPotionEffects() {
 		return potionEffects;
+	}
+	public ItemStack getIcon() {
+		return icon;
 	}
 }

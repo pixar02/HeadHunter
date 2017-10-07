@@ -93,6 +93,7 @@ public class KitManager {
 		for (ItemStack itemStack : kit.getItems()) {
 			try {
 				inv.addItem(itemStack);
+
 			} catch (Exception ex) {
 
 			}

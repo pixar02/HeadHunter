@@ -10,7 +10,6 @@ import mc.pixar02.PlayerHunter.API.PlaceHolders;
 import mc.pixar02.PlayerHunter.Events.onJoin;
 import mc.pixar02.PlayerHunter.Managers.CmdManager;
 import mc.pixar02.PlayerHunter.Managers.GameManager;
-import mc.pixar02.PlayerHunter.Managers.KitManager;
 import mc.pixar02.PlayerHunter.Managers.MapManager;
 import mc.pixar02.PlayerHunter.Managers.PlayerManager;
 import mc.pixar02.PlayerHunter.Managers.WorldManager;
@@ -23,7 +22,7 @@ public class PlayerHunter extends JavaPlugin {
 	private FileManager FM;
 	private WorldManager WM;
 	private GameManager GM;
-	private KitManager KM;
+
 	private PlayerManager PM;
 	private MapManager MM;
 
@@ -53,7 +52,6 @@ public class PlayerHunter extends JavaPlugin {
 		WM = new WorldManager(this);
 		FM = new FileManager();
 		GM = new GameManager(this);
-		KM = new KitManager(this);
 		PM = new PlayerManager(this);
 		MM = new MapManager(this);
 		FM.setup();
@@ -82,11 +80,6 @@ public class PlayerHunter extends JavaPlugin {
 
 	public PlayerManager getPM() {
 		return PM;
-	}
-
-	public KitManager getKM() {
-		return KM;
-
 	}
 
 	public MapManager getMM() {

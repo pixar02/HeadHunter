@@ -14,7 +14,7 @@ public class Game {
 	private PlayerHunter plugin;
 	private String mapName;
 	private World mapWorld;
-	private GameMap gameMap;
+//	private GameMap gameMap;
 	private Location specSpawn;
 	private Location joinSpawn;
 	private List<GamePlayer> gPlayers = new ArrayList<GamePlayer>();

@@ -5,14 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import mc.pixar02.PlayerHunter.PlayerHunter;
-import mc.pixar02.PlayerHunter.Game.GameMap;
+//import mc.pixar02.PlayerHunter.Game.GameMap;
 
 public class MapManager {
 	private PlayerHunter plugin;
 	private File dataDirectory;
 	private File maps;
 	private File rootDirectory;
-	private Map<String, GameMap> mapList = new HashMap<String, GameMap>();
+//	private Map<String, GameMap> mapList = new HashMap<String, GameMap>();
 
 	public MapManager(PlayerHunter plugin) {
 		this.plugin = plugin;

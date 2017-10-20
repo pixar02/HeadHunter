@@ -12,7 +12,7 @@ import mc.pixar02.PlayerHunter.Managers.CmdManager;
 import mc.pixar02.PlayerHunter.Managers.GameManager;
 import mc.pixar02.PlayerHunter.Managers.MapManager;
 import mc.pixar02.PlayerHunter.Managers.PlayerManager;
-import mc.pixar02.PlayerHunter.Managers.WorldManager;
+
 import mc.pixar02.PlayerHunter.Utils.FileManager;
 import mc.pixar02.PlayerHunter.Utils.Metrics;
 
@@ -20,7 +20,7 @@ public class PlayerHunter extends JavaPlugin {
 
 	public boolean debug = false;
 	private FileManager FM;
-	private WorldManager WM;
+
 	private GameManager GM;
 
 	private PlayerManager PM;
@@ -49,7 +49,6 @@ public class PlayerHunter extends JavaPlugin {
 	}
 
 	public void loadManagers() {
-		WM = new WorldManager(this);
 		FM = new FileManager();
 		GM = new GameManager(this);
 		PM = new PlayerManager(this);
@@ -64,10 +63,6 @@ public class PlayerHunter extends JavaPlugin {
 	@SuppressWarnings("unused")
 	public void loadMetrics() {
 		Metrics metrics = new Metrics(this);
-	}
-
-	public WorldManager getWM() {
-		return this.WM;
 	}
 
 	public GameManager getGM() {

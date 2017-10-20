@@ -12,7 +12,7 @@ public class MapManager {
 	private File dataDirectory;
 	private File maps;
 	private File rootDirectory;
-//	private Map<String, GameMap> mapList = new HashMap<String, GameMap>();
+	// private Map<String, GameMap> mapList = new HashMap<String, GameMap>();
 
 	public MapManager(PlayerHunter plugin) {
 		this.plugin = plugin;
@@ -24,7 +24,7 @@ public class MapManager {
 			for (File map : maps.listFiles()) {
 				registerMap(map.getName());
 			}
-		}else {
+		} else {
 			plugin.getLogger().info("Maps not found");
 		}
 	}
@@ -35,4 +35,8 @@ public class MapManager {
 
 	}
 
+	public Boolean mapExists(String name) {
+		
+		return true;
+	}
 }

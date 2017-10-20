@@ -18,13 +18,12 @@ public class CreateCmd extends BaseCmd {
 	 */
 
 	@Override
-	public void onCommand(Player player, String[] args) {
-		// TODO Auto-generated method stub
+	public void onCommand(Player sender, String[] args) {
 		if (plugin.getFM().getFile("config").getString("lobby.world") == null
 				| plugin.getFM().getFile("config").getDouble("lobby.x") == 0
 				| plugin.getFM().getFile("config").getDouble("lobby.y") == 0
 				| plugin.getFM().getFile("config").getDouble("lobby.z") == 0) {
-			player.sendMessage(ChatColor.translateAlternateColorCodes('&',
+			sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
 					plugin.getFM().getFile("messages").getString("error.no-lobby")));
 		} else {
 

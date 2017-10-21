@@ -95,7 +95,7 @@ public class FileManager {
 		}
 	}
 
-	private void copy(InputStream in, File file) {
+	public void copy(InputStream in, File file) {
 		try {
 			OutputStream out = new FileOutputStream(file);
 			byte[] buf = new byte[1024];

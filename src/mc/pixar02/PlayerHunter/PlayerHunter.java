@@ -10,7 +10,7 @@ import mc.pixar02.PlayerHunter.API.PlaceHolders;
 import mc.pixar02.PlayerHunter.Events.onJoin;
 import mc.pixar02.PlayerHunter.Managers.CmdManager;
 import mc.pixar02.PlayerHunter.Managers.GameManager;
-
+import mc.pixar02.PlayerHunter.Managers.StorageManager;
 import mc.pixar02.PlayerHunter.Utils.FileManager;
 import mc.pixar02.PlayerHunter.Utils.Metrics;
 
@@ -19,6 +19,7 @@ public class PlayerHunter extends JavaPlugin {
 	public boolean debug = false;
 	private FileManager FM;
 	private GameManager GM;
+	private StorageManager SM;
 
 	PluginDescriptionFile pdfFile = getDescription();
 	Logger logger = getLogger();
@@ -43,10 +44,11 @@ public class PlayerHunter extends JavaPlugin {
 	}
 
 	public void loadManagers() {
-		FM = new FileManager();
-		GM = new GameManager(this);
-
+		FM = new FileManager(this);
 		FM.setup();
+		GM = new GameManager(this);
+		SM = new StorageManager(this);
+		
 	}
 
 	public void onDisable() {
@@ -60,6 +62,10 @@ public class PlayerHunter extends JavaPlugin {
 
 	public GameManager getGM() {
 		return this.GM;
+	}
+
+	public StorageManager getSM() {
+		return this.SM;
 	}
 
 	public FileManager getFM() {

@@ -20,6 +20,10 @@ public class FileManager {
 
 	private File messagesFile;
 
+	public FileManager(PlayerHunter plugin) {
+		this.plugin = plugin;
+	}
+
 	public void setup() {
 		if (!plugin.getDataFolder().exists()) {
 			plugin.getDataFolder().mkdir();

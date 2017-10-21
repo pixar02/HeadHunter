@@ -20,7 +20,7 @@ public class PlaceHolders extends EZPlaceholderHook {
 		if (pl == null) {
 			return "";
 		}
-		GamePlayer gPlayer = plugin.getPM().getPlayer(pl.getUniqueId());
+		 Player gPlayer = pl;
 		// %playerhunter_player_wins%
 		if (identifier.equalsIgnoreCase("player_wins")) {
 			return String.valueOf(gPlayer.getWins());

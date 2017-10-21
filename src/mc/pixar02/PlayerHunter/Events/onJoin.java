@@ -1,7 +1,5 @@
 package mc.pixar02.PlayerHunter.Events;
 
-import java.util.UUID;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -10,7 +8,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import mc.pixar02.PlayerHunter.PlayerHunter;
-import mc.pixar02.PlayerHunter.Managers.PlayerManager;
 
 public class onJoin implements Listener {
 	private PlayerHunter plugin;

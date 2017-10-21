@@ -7,6 +7,8 @@ Done: /
 TODO:
 - GameMechanics
 - GameManager
+- KitManager:
+  - kits
 - WorldManager
 - PlayerManager (PlayerStats)
 - Data storage (MySQL, JSON, H2, sqlLite, MongoDB)

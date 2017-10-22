@@ -27,15 +27,15 @@ import mc.pixar02.PlayerHunter.Commands.StopCmd;
 public class CmdManager implements CommandExecutor {
 
 	private ArrayList<BaseCmd> cmds = new ArrayList<BaseCmd>();
-	private PlayerHunter pl;
+	private PlayerHunter plugin;
 
-	public CmdManager(PlayerHunter pl) {
-		this.pl = pl;
+	public CmdManager(PlayerHunter plugin) {
+		this.plugin = plugin;
 		// add new commands here:
 		cmds.add(new HelpCmd(this));
 		// from here not above!!!!!
 		cmds.add(new ReloadCmd());
-		cmds.add(new CreateCmd(pl));
+		cmds.add(new CreateCmd(plugin));
 		cmds.add(new DeleteCmd());
 		cmds.add(new EditCmd());
 		cmds.add(new SaveCmd());
@@ -43,7 +43,7 @@ public class CmdManager implements CommandExecutor {
 		cmds.add(new LeaveCmd());
 		cmds.add(new StartCmd());
 		cmds.add(new StopCmd());
-		cmds.add(new SetlobbyCmd(pl));
+		cmds.add(new SetlobbyCmd(plugin));
 
 	}
 

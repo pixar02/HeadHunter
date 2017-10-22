@@ -11,6 +11,8 @@ public class GPlayer {
 	private int balance;
 	private int kills;
 	private int wins;
+	private boolean ingame;
+	private int game;
 
 	public GPlayer(PlayerHunter plugin, UUID uuid) {
 		this.plugin = plugin;
@@ -56,5 +58,21 @@ public class GPlayer {
 
 	public void setWins(int wins) {
 		this.wins = wins;
+	}
+
+	public boolean isIngame() {
+		return ingame;
+	}
+
+	public void setIngame(boolean ingame) {
+		this.ingame = ingame;
+	}
+
+	public Integer getGame() {
+		return game;
+	}
+
+	public void setGame(int gameNum) {
+		this.game = gameNum;
 	}
 }

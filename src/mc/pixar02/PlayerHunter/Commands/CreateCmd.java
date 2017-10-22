@@ -26,7 +26,7 @@ public class CreateCmd extends BaseCmd {
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
 					plugin.getFM().getFile("messages").getString("error.no-lobby")));
 		} else {
-
+			plugin.getGM().createGame();
 		}
 
 	}

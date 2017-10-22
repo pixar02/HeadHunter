@@ -2,12 +2,12 @@ package mc.pixar02.PlayerHunter.Commands;
 
 import org.bukkit.entity.Player;
 
-public class JoinCmd extends BaseCmd {
-
+public class StatsCmd extends BaseCmd {
 	/*
-	 * /PlayerHunter join [game]
-	 * 
+	 *  /PH stats [player]
+	 *
 	 */
+
 	@Override
 	public void onCommand(Player player, String[] args) {
 		// TODO Auto-generated method stub
@@ -16,17 +16,16 @@ public class JoinCmd extends BaseCmd {
 
 	@Override
 	public String name() {
-		return "join";
+		return "stats";
 	}
 
 	@Override
 	public String info() {
-		return "Join the given game";
+		return "gives your stats or given player there stata";
 	}
 
 	@Override
 	public String[] aliases() {
 		return new String[0];
 	}
-
 }

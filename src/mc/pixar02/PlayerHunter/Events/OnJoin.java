@@ -9,10 +9,10 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import mc.pixar02.PlayerHunter.PlayerHunter;
 
-public class onJoin implements Listener {
+public class OnJoin implements Listener {
 	private PlayerHunter plugin;
 
-	public onJoin(PlayerHunter plugin) {
+	public OnJoin(PlayerHunter plugin) {
 		this.plugin = plugin;
 	}
 

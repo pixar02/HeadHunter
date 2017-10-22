@@ -22,6 +22,7 @@ import mc.pixar02.PlayerHunter.Commands.ReloadCmd;
 import mc.pixar02.PlayerHunter.Commands.SaveCmd;
 import mc.pixar02.PlayerHunter.Commands.SetlobbyCmd;
 import mc.pixar02.PlayerHunter.Commands.StartCmd;
+import mc.pixar02.PlayerHunter.Commands.StatsCmd;
 import mc.pixar02.PlayerHunter.Commands.StopCmd;
 
 public class CmdManager implements CommandExecutor {
@@ -44,6 +45,7 @@ public class CmdManager implements CommandExecutor {
 		cmds.add(new StartCmd());
 		cmds.add(new StopCmd());
 		cmds.add(new SetlobbyCmd(plugin));
+		cmds.add(new StatsCmd());
 
 	}
 

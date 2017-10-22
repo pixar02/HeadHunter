@@ -33,6 +33,7 @@ public class PlayerManager {
 		} else {
 			GPlayer gPlayer = players.get(uuid);
 			// TODO save players data to storage
+			
 			players.remove(uuid);
 		}
 	}

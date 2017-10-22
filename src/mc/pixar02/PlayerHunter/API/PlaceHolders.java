@@ -3,7 +3,7 @@ package mc.pixar02.PlayerHunter.API;
 import org.bukkit.entity.Player;
 
 import mc.pixar02.PlayerHunter.PlayerHunter;
-import mc.pixar02.PlayerHunter.Game.GamePlayer;
+import mc.pixar02.PlayerHunter.Game.GPlayer;
 import me.clip.placeholderapi.external.EZPlaceholderHook;
 
 public class PlaceHolders extends EZPlaceholderHook {
@@ -20,7 +20,7 @@ public class PlaceHolders extends EZPlaceholderHook {
 		if (pl == null) {
 			return "";
 		}
-		 Player gPlayer = pl;
+		GPlayer gPlayer = (GPlayer) pl;
 		// %playerhunter_player_wins%
 		if (identifier.equalsIgnoreCase("player_wins")) {
 			return String.valueOf(gPlayer.getWins());
